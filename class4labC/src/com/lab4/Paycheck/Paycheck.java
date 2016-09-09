@@ -20,19 +20,19 @@ public class Paycheck {
 	}
 	
 	public double getFica() {
-		return this.fica;
+		return this.grossPay / 100 * this.fica;
 	}
 	public double getState() {
-		return this.state;
+		return this.grossPay / 100 * this.state;
 	}
 	public double getLocal() {
-		return this.local;
+		return this.grossPay / 100 * this.local;
 	}
 	public double getMedicare() {
-		return this.medicare;
+		return this.grossPay / 100 * this.medicare;
 	}
 	public double getSocialSecurity() {
-		return this.socialSecurity;
+		return this.grossPay / 100 * this.socialSecurity;
 	}
 	
 	public Paycheck(double aGrossPay, double aFica, double aState, double aLocal, double aMedicare, double aSocialSecurity) {
