@@ -61,3 +61,7 @@ Q 1>
 
 	j>
 		i> () -> Math.random();
+		
+		
+		Polymorphism is dynamic message to method binding in the presence of subtype abstraction.
+			Late binding/dynamic binding AND that supports LSP liskov substitution principle
