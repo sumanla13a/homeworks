@@ -1,0 +1,63 @@
+Q 1>
+	a>	
+		a> Imperative style deals with "How to perform tasks (algorithms) and how to track changes in state." and Functional style deals with "What information is desired	and what transformations are required."
+		
+		b> In Imperative style state of the enclosing class can change but in functional the state of enclosing function doesn't change.
+
+	b> 
+
+	c> 
+		i> functional interface -> An interface with only one abstract method declaration.
+			eg: @FunctionalInterface
+				public interface Consumer<T> {
+					void accept(T t);
+				}
+
+		ii> functor -> An implementation of a functional interface is called a functor. 
+			eg: public class ConsumerImplementor implements Consumer<String> {
+				@Override
+				public void accept(String S) {
+					System.out.println(S);
+				}
+			}
+
+		iii> Closure -> A closure is a functor embedded inside another class, that is 		capable of remembering the state of its enclosing object.
+			eg: public class ClosureExample {
+				private String hello = "Hello";
+				public void sayHello () {
+					class hello {
+						public void sayingHelloNow() {
+							System.out.println(hello); // free variable hello
+						}
+					}
+				}
+			}
+
+	d>
+		i> Clean readable program written.
+		ii> Less prone to error as most task is handled by the compiler
+		iii> 
+
+	e>
+		i> (x) -> x + 2 * x * x;
+		ii> (x,y) -> y - x + Math.pow(x,y)
+		iii> (x,y,z) -> z - (x + y)
+
+	f>
+		i>  params: none
+			free variables: s, t
+
+		ii> params: u, v
+			free variables: a, b
+
+		iii> params: s, t
+			 free variables: ignoreCase
+
+	g> 
+
+	h> 
+		i> (String S) -> System.out.println(S);
+		ii> System is a class. Out is a static member
+
+	j>
+		i> () -> Math.random();
