@@ -1,4 +1,4 @@
-package lesson9.labs.prob7a;
+package lesson9.labs.prob7b;
 
 import java.util.*;
 
@@ -10,11 +10,8 @@ public class Main {
 				new Employee("Joe", "Cummings", 760000), new Employee("Steven", "Walters", 135000),
 				new Employee("Thomas", "Blake", 111000), new Employee("Alice", "Richards", 101000),
 				new Employee("Donald", "Trump", 100000));
-
-		list.stream()
-			.filter(emp -> emp.getSalary() >= 100000 && emp.getLastName().matches("^[N-Z].*"))
-			.sorted((m, n)->m.getLastName().compareTo(n.getLastName()))
-			.forEach(emp -> System.out.print(emp.getFirstName() + " " + emp.getLastName() + ", "));
+		List<Employee> newList = LambdaLibrary.EmpFilter.apply(list);
+		newList.forEach(emp -> System.out.print(emp.getFirstName() + " " + emp.getLastName() + ", "));
 	}
 
 }
